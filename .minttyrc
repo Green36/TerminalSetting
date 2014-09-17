@@ -1,0 +1,8 @@
+BoldAsFont=no
+ForegroundColour=255,255,255
+BackgroundColour=0,0,22
+Font=MeiryoKe_Console
+FontHeight=16
+CursorColour=255,0,0
+CursorType=block
+Term=xterm-256color

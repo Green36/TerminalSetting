@@ -1,0 +1,9 @@
+## http://frexx.de/xterm-256-notes/
+# erase background with current bg color
+defbce "on"
+# do not use 'screen-bce'
+term xterm-256color
+
+termcapinfo xterm* ti@:te@
+
+
