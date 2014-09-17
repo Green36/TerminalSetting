@@ -111,7 +111,7 @@ esac
 # Other Settings
 # ------------------------------
 ### RVM ###
-if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
+# if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
 
 ### Macports ###
 case "${OSTYPE}" in
@@ -129,3 +129,6 @@ alias v=vim
 function cd() {
   builtin cd $@ && ls;
 }
+
+[[ -z "$TMUX" && ! -z "$PS1" ]] && tmux
+
