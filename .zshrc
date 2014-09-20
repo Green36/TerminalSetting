@@ -9,8 +9,8 @@ export LANG=ja_JP.UTF-8  # 文字コードをUTF-8に設定
 export KCODE=u           # KCODEにUTF-8を設定
 export AUTOFEATURE=true  # autotestでfeatureを動かす
 
-bindkey -e               # キーバインドをemacsモードに設定
-#bindkey -v              # キーバインドをviモードに設定
+#bindkey -e               # キーバインドをemacsモードに設定
+bindkey -v              # キーバインドをviモードに設定
 
 setopt no_beep           # ビープ音を鳴らさないようにする
 setopt auto_cd           # ディレクトリ名の入力のみで移動する
@@ -120,10 +120,6 @@ case "${OSTYPE}" in
     export MANPATH=/opt/local/share/man:/opt/local/man:$MANPATH
   ;;
 esac
-
-### Aliases ###
-alias r=rails
-alias v=vim
 
 # cdコマンド実行後、lsを実行する
 function cd() {
