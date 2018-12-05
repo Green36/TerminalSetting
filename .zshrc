@@ -99,7 +99,7 @@ SPROMPT=$tmp_sprompt  # スペル訂正用プロンプト
 
 ### Title (user@hostname) ###
 case "${TERM}" in
-kterm*|xterm*|)
+(kterm*|xterm*|)
   precmd() {
     echo -ne "\033]0;${USER}@${HOST%%.*}\007"
   }
@@ -111,7 +111,7 @@ esac
 # Other Settings
 # ------------------------------
 ### RVM ###
-# if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
+if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
 
 ### Macports ###
 case "${OSTYPE}" in
@@ -129,3 +129,11 @@ function cd() {
 [[ -z "$TMUX" && ! -z "$PS1" ]] && tmux
 
 alias diff='colordiff'
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+export PATH="$PATH:$HOME/rubyrefm/refe" # Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/bin"
+export PATH="$PATH:$HOME/.config"
+
+
